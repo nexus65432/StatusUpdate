@@ -17,7 +17,7 @@ Build an Android Java based client app to get the list of users and update their
 - Added ripple effect tapping on list, good for user feedback (Material design)
 - Customized Toolbar to have custom Titles
 
-#### Technologies used
+#### Libraries used
 
 - Android Recyclerview
 - Android cardView to showing each item of Recyclerview
