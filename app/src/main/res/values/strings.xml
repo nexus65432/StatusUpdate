@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyTeam</string>
+
+    <string name="actionbar_title">"Engineering"</string>
+    <string name="status_loading">"Loading...."</string>
+    <string name="error_network_unavailable">"Network unavailable. Please check connection ! !"</string>
+    <string name="error_message">"Unable to fetch users"</string>
+
+    <string name="language_key">Language</string>
+    <string name="skills_key">Skills</string>
+    <string name="location_key">Location</string>
+    <string name="status_key">Status</string>
+
+</resources>

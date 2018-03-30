@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="user_image_size">75dp</dimen>
+
+    <dimen name="card_margin_top">10dp</dimen>
+    <dimen name="card_margin_side">10dp</dimen>
+
+    <dimen name="header_size">20sp</dimen>
+    <dimen name="key_size">18sp</dimen>
+    <dimen name="value_size">16sp</dimen>
+
+</resources>

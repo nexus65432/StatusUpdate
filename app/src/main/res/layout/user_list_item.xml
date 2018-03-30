@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import
+            type="com.nexus.user.status.datamodel.UserObj"
+            tools:ignore="MissingPrefix" />
+
+        <import
+            type="com.nexus.user.status.datamodel.StatusUpdate"
+            tools:ignore="MissingPrefix" />
+
+        <variable
+            name="user"
+            type="UserObj"
+            tools:ignore="MissingPrefix" />
+
+        <variable
+            name="status"
+            type="StatusUpdate"
+            tools:ignore="MissingPrefix" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/card_margin_top"
+        android:paddingLeft="@dimen/card_margin_side"
+        android:paddingRight="@dimen/card_margin_side"
+        android:paddingTop="@dimen/card_margin_top">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="@dimen/user_image_size"
+                        android:layout_height="@dimen/user_image_size"
+                        android:layout_marginRight="20dp"
+                        app:imageUrl="@{user.userAvatar}"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/user_avatar"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:username="@{user.userName}"
+                            android:textColor="@color/black_effective"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/header_size" />
+
+                        <TextView
+                            android:id="@+id/userrole"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:userrole="@{user.userRole}"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/key_size" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/language_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/language_key"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/key_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/language_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        app:userlanguages="@{user.userLanguages}"
+                        android:textColor="@color/black_effective"
+                        android:textSize="@dimen/value_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/skills_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/skills_key"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/key_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/skills_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        app:userTags="@{user.userTags}"
+                        android:textColor="@color/black_effective"
+                        android:textSize="@dimen/value_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/location_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/location_key"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/key_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/location_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        app:userlocation="@{user.userLocation}"
+                        android:textColor="@color/black_effective"
+                        android:textSize="@dimen/value_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/status_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/status_key"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/key_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/status_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@{user.userStatus}"
+                        android:textColor="@color/black_effective"
+                        android:textSize="@dimen/value_size" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>
