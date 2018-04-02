@@ -1,4 +1,4 @@
-# Android exercise
+# Project
 Build an Android Java based client app to get the list of users and update their roles and status
 
 ### Available features
